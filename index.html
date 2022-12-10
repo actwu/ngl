@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actwu Official Site">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+    <meta name="theme-color" content="#191919">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="Actwu">
+    <meta property="og:description" content="Actwu Official Site">
+    <meta property="og:image" content="https://actwu.github.io/img/banner.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Actwu">
+    <meta name="twitter:description" content="Actwu Official Site">
+    <meta name="twitter:image" content="https://actwu.github.io/img/banner.png">
+    <meta name="twitter:image:alt" content="Actwu">
+  
+    <meta property="title" content="Actwu">
+    <meta property="author" content="Actwu">
+    <meta property="image" content="https://actwu.github.io/img/banner.png">
+    <meta property="description" content="Actwu Official Site">
+    <title>Actwu</title>
+    <script src="https://cordzip.github.io/cz.js">
+   </script>
+   
+   <link rel="stylesheet" href="https://cordzip.github.io/cz.css">
+   <link rel="shortcut icon" href="https://actwu.github.io/img/icon.png" type="image/x-icon">
+  
+  </head>
+
+
+  <style>
+
+    div.gradiente {
+     background-image: linear-gradient(to bottom right, rgb(64, 59, 105), rgb(196, 117, 170));
+     background-color: black;
+    }
+  </style>
+<body>
+
+  <div class="fullscreen gradiente center">
+
+    <span class="head">
+
+      <p class="white center comfort">actwu/</p>
+
+    <p class="white bold mid comfort">ngl</p>
+
+    </span>
+  <form name="ts">
+ 
+   <span class="item land space2">
+      
+    <textarea name="chat" placeholder="Ask me anything..." 
+    required="" class="no-round mid dark-txt white2-bg" 
+    style="width: 224px; height: 176px;"></textarea>
+  
+      <button type="submit" class="btn round prim">
+        <i class="fa-solid fa-reply white"></i>
+      </button>
+
+    </span>
+
+
+     </form>
+
+     <div class="foot">
+      <p class="white center comfort">Coded by iian</p>
+     </div>
+     
+     </div>
+
+
+</body>
+<script>
+  add = add_css_fontawesome()
+</script>
+
+<script>
+  const form = document.forms['ts']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(db, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+
+      
+  })
+</script>
+
+<script src="sets/db.js"></script>
+</html>
